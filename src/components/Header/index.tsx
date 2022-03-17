@@ -3,6 +3,7 @@ import { Container } from './styles'
 import Switch from 'react-switch'
 import { ThemeContext } from 'styled-components'
 import { shade } from 'polished'
+import { LogoMain } from './styles'
 
 interface Props {
   toggleTheme(): void
@@ -12,7 +13,12 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
   const { colors, title } = useContext(ThemeContext)
   return (
     <Container>
-      Hellow World
+      <LogoMain src="/images/star.png" alt="logoStar" />
+      <nav>
+        <a>Home</a>
+        <a>Post</a>
+        <a>Post</a>
+      </nav>
       <Switch
         onChange={toggleTheme}
         checked={title === 'dark'}
@@ -21,7 +27,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
         height={10}
         width={40}
         handleDiameter={20}
-        offColor={shade(0.15, colors.primary)}
+        offColor={shade(0.15, colors.text)}
         onColor={colors.secondary}
       />
     </Container>

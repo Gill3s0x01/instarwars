@@ -9,3 +9,7 @@ export const Container = styled.div`
   padding: 0 30px;
   color: ${(props) => props.theme.colors.textUp};
 `
+export const LogoMain = styled.img`
+  height: 60px;
+  width: auto;
+`
