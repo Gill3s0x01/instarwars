@@ -1,22 +1,17 @@
 import { useState, useEffect } from 'react'
 import CardMain from '../../components/Cards'
+import { useStars } from '../../hooks/useStars'
 import { IStars } from '../../interfaces'
 import { Banner, ImageBkg, Container } from './styles'
 
 const MainCard = () => {
+  const { data: item, error } = useStars()
   const [data, setData] = useState<IStars[] | undefined>()
-  const [error, setError] = useState()
 
   useEffect(() => {
-    fetch('https://sky-frontend.herokuapp.com/movies')
-      .then((res) => res.json())
-      .then((res) => {
-        setData(res)
-        console.log(res, 'TESTE')
-      })
-      .catch((err) => {
-        setError(err)
-      })
+    if (item) {
+      setData(item)
+    }
   }, [])
 
   return (
@@ -25,16 +20,18 @@ const MainCard = () => {
         <ImageBkg src="/images/bg7.jpg" alt="background" />
       </Banner>
       <Container>
-        <CardMain />
-        <CardMain />
-        <CardMain />
-        <CardMain />
-        <CardMain />
-        <CardMain />
-        <CardMain />
-        <CardMain />
-        <CardMain />
-        <CardMain />
+        {data &&
+          data.map((item: IStars) => (
+            <CardMain
+              key={item.id}
+              title={item.title}
+              mediaType={item.mediaType}
+              categories={item.categories}
+              price={item.price}
+              description={item.description}
+              year={item.year}
+            />
+          ))}
       </Container>
     </>
   )

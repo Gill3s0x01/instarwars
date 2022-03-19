@@ -1,6 +1,7 @@
 export interface IStars {
+  id?: string
   title: string
-  images: IImage[]
+  images?: IImage[]
   mediaType: string
   description: string
   price: string

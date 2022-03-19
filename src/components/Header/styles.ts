@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  height: 90px;
+  height: 80px;
   background-color: ${(props) => props.theme.colors.primary};
   display: flex;
   justify-content: space-between;
@@ -10,6 +10,6 @@ export const Container = styled.div`
   color: ${(props) => props.theme.colors.textUp};
 `
 export const LogoMain = styled.img`
-  height: 70px;
+  height: 60px;
   width: auto;
 `

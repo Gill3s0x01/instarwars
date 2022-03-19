@@ -7,8 +7,9 @@ import {
   Title,
   Text,
 } from './styles'
+import { IStars } from '../../interfaces'
 
-const CardMain = () => {
+const CardMain = (props: IStars) => {
   const Click = () => {
     alert('Click')
   }
@@ -21,8 +22,12 @@ const CardMain = () => {
         </WrapImage>
       </ButtonModal>
       <Description>
-        <Title>Titulo</Title>
-        <Text>Descrição</Text>
+        <Title>{props.title}</Title>
+        <Text>{props.mediaType}</Text>
+        <Text>{props.categories}</Text>
+        <Text>{props.price}</Text>
+        <Text>{props.description}</Text>
+        <Text>{props.year}</Text>
       </Description>
     </Container>
   )
