@@ -40,6 +40,8 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     background-color: ${(props) => props.theme.colors.backgroundColor};
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100vh;
     color: ${(props) => props.theme.colors.text};
   }
 

@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  height: 60px;
+  height: 90px;
   background-color: ${(props) => props.theme.colors.primary};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px;
+  padding: 0px 30px;
   color: ${(props) => props.theme.colors.textUp};
 `
 export const LogoMain = styled.img`
-  height: 60px;
+  height: 70px;
   width: auto;
 `

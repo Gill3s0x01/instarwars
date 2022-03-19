@@ -1,14 +1,14 @@
 import Head from 'next/head'
+import MainCard from './MainCard'
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>InstaHome</title>
       </Head>
-
-      <h1>InstaHome</h1>
-    </div>
+      <MainCard />
+    </>
   )
 }
 
