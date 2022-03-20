@@ -2,12 +2,10 @@ import styled from 'styled-components'
 
 export const ImageCard = styled.img`
   width: 100%;
-  height: px;
-`
-export const WrapImage = styled.div`
-  overflow: hidden;
+  height: 250px;
 
-  width: 100%;
+  object-fit: fill;
+  border-radius: 5px;
 `
 
 export const ButtonModal = styled.button`

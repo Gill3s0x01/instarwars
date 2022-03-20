@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import { Container } from './styles'
 import Switch from 'react-switch'
 import { ThemeContext } from 'styled-components'
 import { shade } from 'polished'
-import { LogoMain } from './styles'
+import { Container, LogoMain } from './styles'
+import { SigninButton } from '../SigninButton'
 
 interface Props {
   toggleTheme(): void
@@ -19,6 +19,7 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
         <a>Post</a>
         <a>Post</a>
       </nav>
+      <SigninButton />
       <Switch
         onChange={toggleTheme}
         checked={title === 'dark'}

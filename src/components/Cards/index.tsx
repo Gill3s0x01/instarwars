@@ -3,7 +3,6 @@ import {
   ButtonModal,
   Description,
   ImageCard,
-  WrapImage,
   Title,
   Text,
 } from './styles'
@@ -17,9 +16,7 @@ const CardMain = (props: IStars) => {
   return (
     <Container>
       <ButtonModal onClick={Click}>
-        <WrapImage>
-          <ImageCard src="/images/bg5.jpg" alt="background" />
-        </WrapImage>
+        <ImageCard src="/images/bg5.jpg" alt="background" />
       </ButtonModal>
       <Description>
         <Title>{props.title}</Title>

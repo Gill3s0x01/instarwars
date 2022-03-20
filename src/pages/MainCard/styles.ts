@@ -15,13 +15,17 @@ export const ImageBkg = styled.img`
 export const Container = styled.div`
   display: grid;
   flex-direction: row;
-  grid-template-columns: repeat(auto-fit, minmax(12rem, 22rem));
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 22rem));
   gap: 1rem;
   justify-content: space-between;
-  margin: 0 auto;
 
-  @media (max-width: 860px) {
+  @media (max-width: 820px) {
+    padding-left: 2rem;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
     position: relative;
   }
 `

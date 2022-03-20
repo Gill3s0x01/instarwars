@@ -12,13 +12,13 @@ const MainCard = () => {
     if (item) {
       setData(item)
     }
-  }, [])
+  }, [item])
 
   return (
     <>
-      <Banner>
+      {/* <Banner>
         <ImageBkg src="/images/bg7.jpg" alt="background" />
-      </Banner>
+      </Banner> */}
       <Container>
         {data &&
           data.map((item: IStars) => (
