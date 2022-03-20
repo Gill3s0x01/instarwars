@@ -1,8 +1,10 @@
 import { IStars } from '../interfaces/IStars'
-import { Api } from '../service/api'
+import getApi from '../service/api'
 
-const getAllMovies = () => Api.get<IStars[]>('/movies')
+const getAllMovies = () => getApi.get<IStars[]>('/movies')
+const getMovieById = (id: number) => getApi.get<IStars>(`/movies/${id}`)
 
-export const listingServices = {
+export const servicesMovie = {
   getAllMovies,
+  getMovieById,
 }
