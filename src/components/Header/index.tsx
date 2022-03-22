@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import Switch from 'react-switch'
 import { ThemeContext } from 'styled-components'
 import { shade } from 'polished'
-import { Container, LogoMain } from './styles'
+import { Container, LogoMain, Nav, Text } from './styles'
 import { SigninButton } from '../SigninButton'
 
 interface Props {
@@ -14,11 +14,11 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <Container>
       <LogoMain src="/images/star.png" alt="logoStar" />
-      <nav>
-        <a>Home</a>
-        <a>Post</a>
-        <a>Post</a>
-      </nav>
+      <Nav>
+        <Text>Home</Text>
+        <Text>Post</Text>
+        <Text>Post</Text>
+      </Nav>
       <SigninButton />
       <Switch
         onChange={toggleTheme}
