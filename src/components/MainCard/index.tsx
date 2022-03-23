@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import CardMain from '../../components/Cards'
+import CardMain from '../Cards'
 import { usePlanets } from '../../hooks/usePlanets'
 import { useStars } from '../../hooks/useStars'
 import { IPlanet, IStars } from '../../interfaces'

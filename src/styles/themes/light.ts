@@ -6,7 +6,7 @@ export default {
     primary: '#000',
     secondary: '#ff872c',
 
-    backgroundColor: '#f0f0f5',
+    backgroundColor: '#f0f0f9',
     text: '#4a5568',
     textUp: '#f0f0f5',
   },

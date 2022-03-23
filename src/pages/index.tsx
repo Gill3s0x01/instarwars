@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import MainCard from './MainCard'
+import { SubscribeButton } from '../components/SubscribeButton'
+import { AvatarMain, ContentContainer, Hero } from './stylesHome'
 
 const Home = () => {
   return (
@@ -7,7 +8,21 @@ const Home = () => {
       <Head>
         <title>InstaHome</title>
       </Head>
-      <MainCard />
+
+      <ContentContainer>
+        <Hero>
+          <span> 👋 Hey, welcome </span>
+          <h1>
+            New about the
+            <span> Stars Wars</span> world.
+          </h1>
+          <p>
+            Get acesse to all the informations <br /> <span>$9.90</span>
+          </p>
+          <SubscribeButton />
+        </Hero>
+        <AvatarMain src="/images/avatar.png" alt="Girl coding" />
+      </ContentContainer>
     </>
   )
 }
